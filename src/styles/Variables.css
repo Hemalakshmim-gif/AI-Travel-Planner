@@ -1,0 +1,95 @@
+/* ===========================================
+   LIGHT THEME
+=========================================== */
+
+:root{
+
+/* Backgrounds */
+
+--bg:#F8FAFC;
+
+--card:#FFFFFF;
+
+--card-secondary:#F1F5F9;
+
+/* Text */
+
+--text:#0F172A;
+
+--text-light:#64748B;
+
+--text-muted:#94A3B8;
+
+/* Borders */
+
+--border:#E2E8F0;
+
+/* Brand */
+
+--primary:#2563EB;
+
+--primary-hover:#1D4ED8;
+
+--secondary:#14B8A6;
+
+/* Status */
+
+--success:#22C55E;
+
+--warning:#F59E0B;
+
+--danger:#EF4444;
+
+/* Shadow */
+
+--shadow:0 18px 45px rgba(15,23,42,.08);
+
+}
+
+/* ===========================================
+   DARK THEME
+=========================================== */
+
+[data-theme="dark"]{
+
+/* Backgrounds */
+
+--bg:#0F172A;
+
+--card:#1E293B;
+
+--card-secondary:#334155;
+
+/* Text */
+
+--text:#F8FAFC;
+
+--text-light:#CBD5E1;
+
+--text-muted:#94A3B8;
+
+/* Borders */
+
+--border:#475569;
+
+/* Brand */
+
+--primary:#3B82F6;
+
+--primary-hover:#60A5FA;
+
+--secondary:#2DD4BF;
+
+/* Status */
+
+--success:#4ADE80;
+
+--warning:#FBBF24;
+
+--danger:#F87171;
+
+/* Shadow */
+
+--shadow:0 18px 45px rgba(0,0,0,.45);
+
+}

@@ -1,0 +1,1706 @@
+/* =========================================================
+   COMPARE PAGE
+========================================================= */
+
+.compare-page {
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  padding: 40px 30px 70px;
+
+  background: #f8fafc;
+
+  color: #0f172a;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.compare-hero {
+  max-width: 1500px;
+
+  margin: 0 auto 30px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.compare-hero-icon {
+  width: 64px;
+  height: 64px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #14b8a6
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 28px rgba(37, 99, 235, 0.2);
+}
+
+.compare-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  color: #2563eb;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.compare-hero h1 {
+  margin: 0;
+
+  font-size: 38px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+.compare-hero p {
+  max-width: 720px;
+
+  margin: 9px 0 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SELECTOR CARD
+========================================================= */
+
+.compare-selector-card {
+  max-width: 1500px;
+
+  margin: 0 auto 35px;
+
+  padding: 28px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    70px
+    1fr;
+
+  align-items: end;
+
+  gap: 25px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 35px rgba(15, 23, 42, 0.05);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   TRIP SELECTOR
+========================================================= */
+
+.trip-selector {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.trip-selector label {
+  color: #475569;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.trip-selector select {
+  width: 100%;
+
+  height: 56px;
+
+  padding: 0 17px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dbe3ee;
+
+  border-radius: 14px;
+
+  background: #f8fafc;
+
+  color: #0f172a;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+.trip-selector select:hover {
+  background: #ffffff;
+
+  border-color: #93c5fd;
+}
+
+.trip-selector select:focus {
+  background: #ffffff;
+
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   VS BADGE
+========================================================= */
+
+.vs-badge {
+  width: 48px;
+  height: 48px;
+
+  align-self: end;
+
+  justify-self: center;
+
+  margin-bottom: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eef4ff;
+
+  color: #2563eb;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 6px 18px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================================
+   DESTINATION CARDS
+========================================================= */
+
+.compare-destinations {
+  max-width: 1500px;
+
+  margin: 0 auto 35px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    70px
+    1fr;
+
+  gap: 20px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   TRIP CARD
+========================================================= */
+
+.compare-trip-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.compare-trip-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.11);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.compare-image-wrapper {
+  position: relative;
+
+  height: 270px;
+
+  overflow: hidden;
+}
+
+.compare-trip-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.compare-trip-card:hover
+.compare-trip-image {
+  transform: scale(1.04);
+}
+
+.compare-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(15, 23, 42, 0.08),
+      rgba(15, 23, 42, 0.35)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MATCH BADGE
+========================================================= */
+
+.compare-match-badge {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  color: #2563eb;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 20px rgba(15, 23, 42, 0.14);
+}
+
+.compare-match-badge svg {
+  color: #6366f1;
+}
+
+
+/* =========================================================
+   TRIP LABEL
+========================================================= */
+
+.compare-trip-label {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background: rgba(15, 23, 42, 0.72);
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   TRIP INFO
+========================================================= */
+
+.compare-trip-info {
+  padding: 25px;
+}
+
+.compare-destination-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 18px;
+}
+
+.compare-destination-row h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 29px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.compare-location {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 8px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.compare-location svg {
+  flex-shrink: 0;
+
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   SCORE
+========================================================= */
+
+.compare-score {
+  min-width: 78px;
+
+  padding: 10px 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 2px;
+
+  border-radius: 15px;
+
+  background: #eef4ff;
+
+  color: #2563eb;
+
+  box-sizing: border-box;
+}
+
+.compare-score svg {
+  color: #6366f1;
+}
+
+.compare-score strong {
+  font-size: 20px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+.compare-score span {
+  font-size: 10px;
+
+  font-weight: 700;
+
+  color: #64748b;
+}
+
+
+/* =========================================================
+   TRIP META
+========================================================= */
+
+.compare-trip-meta {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 22px;
+
+  margin-top: 20px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #edf1f5;
+}
+
+.compare-trip-meta div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.compare-trip-meta svg {
+  color: #2563eb;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   CENTER VS
+========================================================= */
+
+.versus-center {
+  width: 52px;
+  height: 52px;
+
+  justify-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #14b8a6
+    );
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.2);
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.comparison-section,
+.weather-comparison-section {
+  max-width: 1500px;
+
+  margin: 0 auto 35px;
+
+  padding: 32px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 10px 35px rgba(15, 23, 42, 0.05);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 25px;
+}
+
+.section-heading-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #eef4ff;
+
+  color: #2563eb;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: 24px;
+
+  color: #0f172a;
+}
+
+.section-heading p {
+  margin: 4px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   COMPARISON TABLE
+========================================================= */
+
+.comparison-table {
+  overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+}
+
+.comparison-row {
+  min-height: 80px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    180px
+    1fr;
+
+  align-items: center;
+
+  border-bottom: 1px solid #edf1f5;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-value {
+  min-height: 80px;
+
+  padding: 15px 25px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  color: #0f172a;
+}
+
+.comparison-value:last-child {
+  justify-content: flex-start;
+}
+
+.comparison-value.winner {
+  background: #f0fdf4;
+}
+
+.comparison-number {
+  font-size: 18px;
+
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+.comparison-label {
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  border-left: 1px solid #edf1f5;
+
+  border-right: 1px solid #edf1f5;
+}
+
+.comparison-label svg {
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   WINNER BADGE
+========================================================= */
+
+.winner-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+
+  color: #15803d;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   WEATHER COMPARISON
+========================================================= */
+
+.weather-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 20px;
+}
+
+.weather-compare-card {
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eff6ff,
+      #f8fafc
+    );
+
+  border: 1px solid #dbeafe;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.weather-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.weather-card-top span {
+  color: #64748b;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.weather-card-top h3 {
+  margin: 5px 0 0;
+
+  font-size: 34px;
+
+  color: #0f172a;
+}
+
+.weather-card-top svg {
+  color: #2563eb;
+}
+
+.weather-compare-card p {
+  margin: 10px 0 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   INTEREST TABLE
+========================================================= */
+
+.interest-table {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+}
+
+.interest-table-header {
+  display: grid;
+
+  grid-template-columns:
+    100px
+    1fr
+    100px;
+
+  padding: 15px 20px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+.interest-row {
+  min-height: 60px;
+
+  display: grid;
+
+  grid-template-columns:
+    100px
+    1fr
+    100px;
+
+  align-items: center;
+
+  border-top: 1px solid #edf1f5;
+}
+
+.interest-status {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #64748b;
+}
+
+.interest-status.available {
+  color: #16a34a;
+}
+
+.interest-status.not-available {
+  color: #ef4444;
+}
+
+.interest-name {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 14px 16px;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.interest-name svg {
+  color: #2563eb;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   AI RECOMMENDATION
+========================================================= */
+
+.ai-recommendation {
+  max-width: 1500px;
+
+  margin: 0 auto 35px;
+
+  padding: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  box-sizing: border-box;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #14b8a6
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 15px 40px rgba(37, 99, 235, 0.18);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.recommendation-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  color: #ffffff;
+}
+
+.recommendation-content {
+  min-width: 0;
+}
+
+.recommendation-label {
+  display: inline-block;
+
+  margin-bottom: 5px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  opacity: 0.8;
+}
+
+.recommendation-content h2 {
+  margin: 5px 0 10px;
+
+  font-size: 27px;
+
+  color: #ffffff;
+}
+
+.recommendation-winner {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 8px;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  font-size: 14px;
+}
+
+.recommendation-content p {
+  margin: 0;
+
+  max-width: 900px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.compare-empty {
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.empty-icon {
+  width: 80px;
+  height: 80px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #14b8a6
+    );
+
+  color: #ffffff;
+}
+
+.compare-empty h1 {
+  margin: 0;
+
+  font-size: 38px;
+
+  color: #0f172a;
+}
+
+.compare-empty p {
+  max-width: 600px;
+
+  margin: 12px auto 25px;
+
+  color: #64748b;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.compare-primary-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 13px 20px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.compare-primary-btn:hover {
+  transform: translateY(-2px);
+
+  background: #1d4ed8;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.compare-loading {
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 20px;
+
+  border: 4px solid #dbeafe;
+
+  border-top-color: #2563eb;
+
+  border-radius: 50%;
+
+  animation:
+    compareSpin
+    0.8s linear infinite;
+}
+
+.compare-loading h2 {
+  margin: 0;
+
+  color: #0f172a;
+}
+
+.compare-loading p {
+  margin-top: 8px;
+
+  color: #64748b;
+}
+
+@keyframes compareSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   DARK MODE
+   ONLY COLORS CHANGE
+========================================================= */
+
+html[data-theme="dark"] .compare-page {
+  background: #0f172a;
+
+  color: #f8fafc;
+}
+
+
+/* =========================================================
+   DARK - HERO
+========================================================= */
+
+html[data-theme="dark"] .compare-eyebrow {
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] .compare-hero h1 {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .compare-hero p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   DARK - SELECTOR
+========================================================= */
+
+html[data-theme="dark"] .compare-selector-card {
+  background: #1e293b;
+
+  border-color: #334155;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+html[data-theme="dark"] .trip-selector label {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .trip-selector select {
+  background: #172033;
+
+  border-color: #475569;
+
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .trip-selector select:hover {
+  background: #1e293b;
+
+  border-color: #60a5fa;
+}
+
+html[data-theme="dark"] .trip-selector select:focus {
+  background: #1e293b;
+
+  border-color: #60a5fa;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.18);
+}
+
+html[data-theme="dark"] .vs-badge {
+  background: rgba(37, 99, 235, 0.18);
+
+  color: #60a5fa;
+}
+
+
+/* =========================================================
+   DARK - DESTINATION CARDS
+========================================================= */
+
+html[data-theme="dark"] .compare-trip-card {
+  background: #1e293b;
+
+  border-color: #334155;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="dark"] .compare-destination-row h2 {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .compare-location {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .compare-location svg {
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] .compare-score {
+  background: rgba(37, 99, 235, 0.18);
+
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] .compare-score svg {
+  color: #a78bfa;
+}
+
+html[data-theme="dark"] .compare-score span {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .compare-trip-meta {
+  border-top-color: #334155;
+}
+
+html[data-theme="dark"] .compare-trip-meta div {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .compare-trip-meta svg {
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] .versus-center {
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #0f766e
+    );
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   DARK - SECTIONS
+========================================================= */
+
+html[data-theme="dark"] .comparison-section,
+html[data-theme="dark"] .weather-comparison-section {
+  background: #1e293b;
+
+  border-color: #334155;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.24);
+}
+
+html[data-theme="dark"] .section-heading h2 {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .section-heading p {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .section-heading-icon {
+  background: rgba(37, 99, 235, 0.18);
+
+  color: #60a5fa;
+}
+
+
+/* =========================================================
+   DARK - COMPARISON TABLE
+========================================================= */
+
+html[data-theme="dark"] .comparison-table {
+  border-color: #334155;
+}
+
+html[data-theme="dark"] .comparison-row {
+  border-bottom-color: #334155;
+}
+
+html[data-theme="dark"] .comparison-value {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .comparison-value.winner {
+  background: rgba(34, 197, 94, 0.09);
+}
+
+html[data-theme="dark"] .comparison-number {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .comparison-label {
+  color: #cbd5e1;
+
+  border-left-color: #334155;
+
+  border-right-color: #334155;
+}
+
+html[data-theme="dark"] .comparison-label svg {
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] .winner-badge {
+  background: rgba(34, 197, 94, 0.16);
+
+  color: #4ade80;
+}
+
+
+/* =========================================================
+   DARK - WEATHER
+========================================================= */
+
+html[data-theme="dark"] .weather-compare-card {
+  background:
+    linear-gradient(
+      135deg,
+      #172554,
+      #1e293b
+    );
+
+  border-color: #334155;
+}
+
+html[data-theme="dark"] .weather-card-top span {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .weather-card-top h3 {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .weather-card-top svg {
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] .weather-compare-card p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   DARK - INTEREST TABLE
+========================================================= */
+
+html[data-theme="dark"] .interest-table {
+  border-color: #334155;
+}
+
+html[data-theme="dark"] .interest-table-header {
+  background: #172033;
+
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .interest-row {
+  border-top-color: #334155;
+}
+
+html[data-theme="dark"] .interest-name {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .interest-name svg {
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] .interest-status.available {
+  color: #4ade80;
+}
+
+html[data-theme="dark"] .interest-status.not-available {
+  color: #f87171;
+}
+
+
+/* =========================================================
+   DARK - AI RECOMMENDATION
+========================================================= */
+
+html[data-theme="dark"] .ai-recommendation {
+  background:
+    linear-gradient(
+      135deg,
+      #1d4ed8,
+      #0f766e
+    );
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] .recommendation-icon {
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .recommendation-label {
+  color: #dbeafe;
+}
+
+html[data-theme="dark"] .recommendation-content h2 {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .recommendation-winner {
+  background: rgba(255, 255, 255, 0.14);
+
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .recommendation-content p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   DARK - EMPTY
+========================================================= */
+
+html[data-theme="dark"] .compare-empty h1 {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .compare-empty p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   DARK - LOADING
+========================================================= */
+
+html[data-theme="dark"] .loading-spinner {
+  border-color: #334155;
+
+  border-top-color: #60a5fa;
+}
+
+html[data-theme="dark"] .compare-loading h2 {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .compare-loading p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .compare-page {
+    padding: 30px 25px 60px;
+  }
+
+  .compare-selector-card {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-badge {
+    margin: 0 auto;
+  }
+
+  .compare-destinations {
+    grid-template-columns: 1fr;
+  }
+
+  .versus-center {
+    margin: -8px auto;
+
+    z-index: 2;
+  }
+
+  .comparison-row {
+    grid-template-columns:
+      1fr
+      140px
+      1fr;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .compare-page {
+    padding: 25px 15px 50px;
+  }
+
+  .compare-hero {
+    align-items: flex-start;
+  }
+
+  .compare-hero-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .compare-hero h1 {
+    font-size: 32px;
+  }
+
+  .compare-hero p {
+    font-size: 14px;
+  }
+
+  .compare-selector-card,
+  .comparison-section,
+  .weather-comparison-section {
+    padding: 20px;
+  }
+
+  .compare-image-wrapper {
+    height: 220px;
+  }
+
+  .compare-destination-row {
+    align-items: flex-start;
+  }
+
+  .compare-destination-row h2 {
+    font-size: 25px;
+  }
+
+  .compare-score {
+    min-width: 60px;
+  }
+
+  .comparison-row {
+    grid-template-columns:
+      1fr
+      90px
+      1fr;
+  }
+
+  .comparison-value {
+    padding: 12px 8px;
+  }
+
+  .comparison-number {
+    font-size: 14px;
+  }
+
+  .comparison-label {
+    font-size: 11px;
+
+    text-align: center;
+  }
+
+  .winner-badge {
+    display: none;
+  }
+
+  .weather-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interest-table-header,
+  .interest-row {
+    grid-template-columns:
+      65px
+      1fr
+      65px;
+  }
+
+  .ai-recommendation {
+    padding: 25px;
+
+    align-items: flex-start;
+  }
+
+  .recommendation-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .recommendation-content h2 {
+    font-size: 22px;
+  }
+
+}

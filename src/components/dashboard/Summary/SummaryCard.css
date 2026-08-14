@@ -1,0 +1,387 @@
+/* ===========================================
+   SUMMARY CARD
+=========================================== */
+
+.summary-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:32px;
+
+    box-shadow:var(--shadow);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.summary-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.summary-location{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:15px;
+
+}
+
+.summary-location svg{
+
+    color:var(--primary);
+
+}
+
+.summary-location h2{
+
+    font-size:34px;
+
+    color:var(--text);
+
+}
+
+.summary-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+}
+
+.summary-meta span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+/* ===========================================
+   ACTION BUTTONS
+=========================================== */
+
+.summary-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.summary-buttons button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:12px 18px;
+
+    background:var(--card-secondary);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.summary-buttons button:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================================
+   BODY
+=========================================== */
+
+.summary-body{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+}
+
+/* ===========================================
+   AI SCORE
+=========================================== */
+
+.ai-score-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    background:var(--card-secondary);
+
+    border:1px solid var(--border);
+
+    padding:25px;
+
+    border-radius:20px;
+
+}
+
+.score-circle{
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.score-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+    color:var(--text);
+
+}
+
+.ai-score-card p{
+
+    color:var(--text-light);
+
+    line-height:1.6;
+
+}
+
+/* ===========================================
+   OVERVIEW
+=========================================== */
+
+.trip-overview{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.overview-box{
+
+    background:var(--card-secondary);
+
+    border:1px solid var(--border);
+
+    padding:22px;
+
+    border-radius:18px;
+
+}
+
+.overview-box svg{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.overview-box h4{
+
+    font-size:15px;
+
+    color:var(--text-light);
+
+    margin-bottom:8px;
+
+}
+
+.overview-box h3{
+
+    font-size:26px;
+
+    color:var(--text);
+
+}
+
+.overview-box small{
+
+    color:var(--text-light);
+
+}
+
+/* ===========================================
+   INTEREST TAGS
+=========================================== */
+
+.interest-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.interest-tags span{
+
+    padding:10px 18px;
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--primary);
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.interest-tags span:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:900px){
+
+.summary-body{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* ==========================================
+   SAVED BUTTON
+========================================== */
+
+.summary-buttons button.saved {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.summary-buttons button.saved:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   PRINT / PDF
+========================================== */
+
+@media print {
+
+  body * {
+    visibility: hidden;
+  }
+
+  .summary-card,
+  .summary-card * {
+    visibility: visible;
+  }
+
+  .summary-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+
+  .summary-buttons {
+    display: none !important;
+  }
+}

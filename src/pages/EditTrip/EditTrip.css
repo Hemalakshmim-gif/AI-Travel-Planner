@@ -1,0 +1,908 @@
+/* =========================================================
+   EDIT TRIP PAGE
+========================================================= */
+
+.edit-trip-page {
+  min-height: 100vh;
+  padding: 40px 48px 80px;
+
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(37, 99, 235, 0.07),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(20, 184, 166, 0.06),
+      transparent 28%
+    ),
+    #f8fafc;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.edit-trip-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 28px;
+  padding: 10px 0;
+
+  border: none;
+  background: transparent;
+
+  color: #2563eb;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-btn:hover {
+  color: #1d4ed8;
+  transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.edit-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  margin-bottom: 32px;
+}
+
+
+.edit-header-icon {
+  width: 68px;
+  height: 68px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #4f46e5
+    );
+
+  box-shadow:
+    0 15px 35px
+    rgba(37, 99, 235, 0.22);
+}
+
+
+.edit-label {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+
+.edit-header h1 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+}
+
+
+.edit-header p {
+  margin: 10px 0 0;
+
+  color: #64748b;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.edit-form {
+  padding: 38px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 20px 60px
+    rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+  margin-bottom: 26px;
+}
+
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #1e293b;
+
+  font-size: 14px;
+  font-weight: 750;
+}
+
+
+.form-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.input-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 52px;
+
+  padding: 0 15px;
+
+  background: #f8fafc;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.input-wrapper svg {
+  flex-shrink: 0;
+
+  color: #2563eb;
+}
+
+
+.input-wrapper:focus-within {
+  background: white;
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(59, 130, 246, 0.1);
+}
+
+
+.input-wrapper input {
+  width: 100%;
+
+  min-width: 0;
+
+  margin-left: 11px;
+
+  padding: 14px 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-size: 15px;
+}
+
+
+.input-wrapper input::placeholder {
+  color: #94a3b8;
+}
+
+
+.input-wrapper input[type="date"] {
+  cursor: pointer;
+}
+
+
+.currency {
+  margin-left: 10px;
+
+  color: #475569;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INTERESTS
+========================================================= */
+
+.interest-description {
+  margin: -3px 0 15px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+.interest-grid {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 11px;
+}
+
+
+.interest-btn {
+  padding: 11px 18px;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 999px;
+
+  background: #f8fafc;
+
+  color: #475569;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    all 0.2s ease;
+}
+
+
+.interest-btn:hover {
+  border-color: #93c5fd;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  transform: translateY(-1px);
+}
+
+
+.interest-btn.selected {
+  border-color: transparent;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #4f46e5
+    );
+
+  box-shadow:
+    0 7px 18px
+    rgba(37, 99, 235, 0.18);
+}
+
+
+/* =========================================================
+   AI NOTICE
+========================================================= */
+
+.edit-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  margin-top: 8px;
+  margin-bottom: 30px;
+
+  padding: 18px 20px;
+
+  border: 1px solid #bfdbfe;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eff6ff,
+      #f5f3ff
+    );
+
+  color: #2563eb;
+}
+
+
+.edit-notice > svg {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+}
+
+
+.edit-notice strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #1e3a8a;
+
+  font-size: 14px;
+}
+
+
+.edit-notice p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.edit-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  padding-top: 24px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+
+.cancel-btn,
+.save-btn {
+  min-height: 50px;
+
+  padding: 0 23px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border-radius: 13px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    all 0.2s ease;
+}
+
+
+.cancel-btn {
+  border: 1px solid #dbe3ef;
+
+  background: white;
+
+  color: #475569;
+}
+
+
+.cancel-btn:hover:not(:disabled) {
+  background: #f8fafc;
+
+  border-color: #cbd5e1;
+}
+
+
+.save-btn {
+  min-width: 160px;
+
+  border: none;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #4f46e5
+    );
+
+  box-shadow:
+    0 10px 25px
+    rgba(37, 99, 235, 0.2);
+}
+
+
+.save-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 30px
+    rgba(37, 99, 235, 0.25);
+}
+
+
+.cancel-btn:disabled,
+.save-btn:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.edit-loading {
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.edit-loading svg {
+  color: #2563eb;
+}
+
+
+.edit-loading h2 {
+  margin: 18px 0 5px;
+
+  color: #0f172a;
+
+  font-size: 24px;
+}
+
+
+.edit-loading p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.spin {
+  animation: editSpin 1s linear infinite;
+}
+
+
+@keyframes editSpin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   REGENERATION SCREEN
+========================================================= */
+
+.regenerate-container {
+  width: min(650px, 100%);
+
+  margin: 50px auto;
+
+  padding: 42px;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 28px;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 70px
+    rgba(15, 23, 42, 0.08);
+}
+
+
+.regenerate-icon {
+  width: 76px;
+  height: 76px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed
+    );
+
+  box-shadow:
+    0 15px 35px
+    rgba(79, 70, 229, 0.2);
+}
+
+
+.regenerate-container h1 {
+  margin: 8px 0 13px;
+
+  color: #0f172a;
+
+  font-size: 32px;
+
+  letter-spacing: -0.8px;
+}
+
+
+.regenerate-container > p {
+  max-width: 540px;
+
+  margin: 0 auto;
+
+  color: #64748b;
+
+  line-height: 1.7;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   REGENERATION PREVIEW
+========================================================= */
+
+.regenerate-preview {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin: 28px 0;
+}
+
+
+.regenerate-preview div {
+  padding: 16px 12px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 15px;
+}
+
+
+.regenerate-preview span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #64748b;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+
+.regenerate-preview strong {
+  display: block;
+
+  color: #0f172a;
+
+  font-size: 15px;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   REGENERATE BUTTON
+========================================================= */
+
+.regenerate-btn {
+  width: 100%;
+
+  min-height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #4f46e5
+    );
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 25px
+    rgba(37, 99, 235, 0.2);
+
+  transition:
+    all 0.2s ease;
+}
+
+
+.regenerate-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 30px
+    rgba(37, 99, 235, 0.25);
+}
+
+
+.regenerate-btn:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   KEEP EXISTING PLAN
+========================================================= */
+
+.continue-btn {
+  width: 100%;
+
+  min-height: 50px;
+
+  margin-top: 12px;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 14px;
+
+  background: white;
+
+  color: #475569;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.continue-btn:hover:not(:disabled) {
+  background: #f8fafc;
+
+  border-color: #cbd5e1;
+}
+
+
+.continue-btn:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .edit-trip-page {
+    padding: 30px 25px 60px;
+  }
+
+  .edit-form {
+    padding: 30px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .edit-trip-page {
+    padding: 22px 16px 50px;
+  }
+
+  .edit-header {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .edit-header-icon {
+    width: 54px;
+    height: 54px;
+
+    border-radius: 16px;
+  }
+
+  .edit-header h1 {
+    font-size: 32px;
+  }
+
+  .edit-header p {
+    font-size: 14px;
+  }
+
+  .edit-form {
+    padding: 22px;
+
+    border-radius: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .regenerate-container {
+    margin: 25px auto;
+
+    padding: 30px 20px;
+
+    border-radius: 22px;
+  }
+
+  .regenerate-container h1 {
+    font-size: 27px;
+  }
+
+  .regenerate-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .save-btn {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 420px) {
+
+  .edit-header {
+    flex-direction: column;
+  }
+
+  .interest-grid {
+    gap: 8px;
+  }
+
+  .interest-btn {
+    padding: 9px 14px;
+
+    font-size: 12px;
+  }
+
+}

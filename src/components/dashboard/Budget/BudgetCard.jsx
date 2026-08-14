@@ -1,0 +1,416 @@
+import "./BudgetCard.css";
+
+import {
+  Wallet,
+  Hotel,
+  Utensils,
+  Bus,
+  Camera,
+  Shield,
+  ShoppingBag,
+} from "lucide-react";
+
+const icons = {
+  Hotel: Hotel,
+  Food: Utensils,
+  Transport: Bus,
+  Activities: Camera,
+  Sightseeing: Camera,
+  Emergency: Shield,
+  Shopping: ShoppingBag,
+};
+
+// =====================================================
+// CALCULATE DAYS
+// =====================================================
+
+const calculateDays = (startDate, endDate) => {
+  if (!startDate || !endDate) {
+    return null;
+  }
+
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+
+  if (
+    Number.isNaN(start.getTime()) ||
+    Number.isNaN(end.getTime())
+  ) {
+    return null;
+  }
+
+  const difference =
+    end.getTime() - start.getTime();
+
+  const days =
+    Math.ceil(
+      difference / (1000 * 60 * 60 * 24)
+    );
+
+  return days >= 0 ? days + 1 : null;
+};
+
+// =====================================================
+// NORMALIZE DAYS
+// =====================================================
+
+const getValidDays = (
+  days,
+  startDate,
+  endDate
+) => {
+  // Direct number
+  if (
+    typeof days === "number" &&
+    days > 0
+  ) {
+    return days;
+  }
+
+  // Numeric string
+  if (
+    typeof days === "string" &&
+    days.trim() !== ""
+  ) {
+    const numericDays = Number(days);
+
+    if (
+      Number.isFinite(numericDays) &&
+      numericDays > 0
+    ) {
+      return numericDays;
+    }
+  }
+
+  // Object format
+  if (
+    days &&
+    typeof days === "object"
+  ) {
+    const possibleDays =
+      days.duration ||
+      days.totalDays ||
+      days.days ||
+      days.length;
+
+    if (
+      Number.isFinite(Number(possibleDays)) &&
+      Number(possibleDays) > 0
+    ) {
+      return Number(possibleDays);
+    }
+  }
+
+  // Final fallback:
+  // calculate from start/end dates
+  return calculateDays(
+    startDate,
+    endDate
+  );
+};
+
+// =====================================================
+// NORMALIZE BUDGET BREAKDOWN
+// =====================================================
+
+const normalizeExpenses = (
+  budgetBreakdown
+) => {
+  // Already an array
+  if (
+    Array.isArray(budgetBreakdown)
+  ) {
+    return budgetBreakdown;
+  }
+
+  // No data
+  if (
+    !budgetBreakdown ||
+    typeof budgetBreakdown !== "object"
+  ) {
+    return [];
+  }
+
+  // Object format:
+  // {
+  //   hotel: 10000,
+  //   food: 5000,
+  //   transport: 3000
+  // }
+
+  return Object.entries(
+    budgetBreakdown
+  )
+    .filter(
+      ([, value]) =>
+        value !== null &&
+        value !== undefined &&
+        !Number.isNaN(Number(value))
+    )
+    .map(
+      ([title, amount]) => ({
+        title:
+          title.charAt(0).toUpperCase() +
+          title.slice(1),
+        amount: Number(amount),
+      })
+    );
+};
+
+// =====================================================
+// COMPONENT
+// =====================================================
+
+function BudgetCard({
+  budget,
+  budgetBreakdown,
+  days,
+  travelers,
+  startDate,
+  endDate,
+}) {
+
+  // ===================================================
+  // EXPENSES
+  // ===================================================
+
+  const expenses =
+    normalizeExpenses(
+      budgetBreakdown
+    );
+
+  // ===================================================
+  // TOTAL BREAKDOWN
+  // ===================================================
+
+  const breakdownTotal =
+    expenses.reduce(
+      (sum, item) =>
+        sum +
+        Number(item.amount || 0),
+      0
+    );
+
+  // ===================================================
+  // DISPLAY BUDGET
+  // ===================================================
+
+  const numericBudget =
+    Number(budget);
+
+  const displayBudget =
+    Number.isFinite(numericBudget) &&
+    numericBudget > 0
+      ? numericBudget
+      : breakdownTotal;
+
+  // ===================================================
+  // DAYS
+  // ===================================================
+
+  const tripDays =
+    getValidDays(
+      days,
+      startDate,
+      endDate
+    );
+
+  // ===================================================
+  // TRAVELERS
+  // ===================================================
+
+  const travelerCount =
+    travelers !== null &&
+    travelers !== undefined &&
+    travelers !== ""
+      ? Number(travelers)
+      : null;
+
+  // ===================================================
+  // RENDER
+  // ===================================================
+
+  return (
+    <section className="budget-card">
+
+      {/* =========================================
+          HEADER
+      ========================================= */}
+
+      <div className="budget-header">
+
+        <div className="budget-header-text">
+
+          <span className="section-tag">
+            💰 AI Budget Planner
+          </span>
+
+          <h2>
+            Budget Overview
+          </h2>
+
+          <p>
+            Estimated travel expenses generated by AI.
+          </p>
+
+        </div>
+
+        <div className="wallet-icon">
+          <Wallet size={30} />
+        </div>
+
+      </div>
+
+      {/* =========================================
+          TOTAL BUDGET
+      ========================================= */}
+
+      <div className="budget-total">
+
+        <h1>
+          ₹
+          {Number(
+            displayBudget || 0
+          ).toLocaleString("en-IN")}
+        </h1>
+
+        <span>
+          Total Estimated Cost
+        </span>
+
+      </div>
+
+      {/* =========================================
+          EXPENSE BREAKDOWN
+      ========================================= */}
+
+      <div className="expense-list">
+
+        {expenses.length === 0 ? (
+
+          <div className="empty-budget">
+
+            <Wallet size={22} />
+
+            <p>
+              Detailed budget breakdown is not
+              available yet.
+            </p>
+
+          </div>
+
+        ) : (
+
+          expenses.map(
+            (item, index) => {
+
+              const amount =
+                Number(
+                  item.amount || 0
+                );
+
+              const percent =
+                breakdownTotal > 0
+                  ? Math.min(
+                      100,
+                      (amount /
+                        breakdownTotal) *
+                        100
+                    )
+                  : 0;
+
+              const Icon =
+                icons[item.title] ||
+                Wallet;
+
+              return (
+                <div
+                  className="expense-item"
+                  key={`${item.title}-${index}`}
+                >
+
+                  <div className="expense-top">
+
+                    <div className="expense-title">
+
+                      <div className="expense-icon">
+                        <Icon size={17} />
+                      </div>
+
+                      <span>
+                        {item.title}
+                      </span>
+
+                    </div>
+
+                    <span className="amount">
+                      ₹
+                      {amount.toLocaleString(
+                        "en-IN"
+                      )}
+                    </span>
+
+                  </div>
+
+                  <div className="progress">
+
+                    <div
+                      className="progress-fill"
+                      style={{
+                        width:
+                          `${percent}%`,
+                      }}
+                    />
+
+                  </div>
+
+                </div>
+              );
+            }
+          )
+
+        )}
+
+      </div>
+
+      {/* =========================================
+          FOOTER
+      ========================================= */}
+
+      <div className="budget-footer">
+
+        <div className="budget-stat">
+
+          <small>
+            Trip Duration
+          </small>
+
+          <h3>
+            {tripDays
+              ? `${tripDays} Days`
+              : "--"}
+          </h3>
+
+        </div>
+
+        <div className="budget-stat">
+
+          <small>
+            Travelers
+          </small>
+
+          <h3>
+            {travelerCount
+              ? travelerCount
+              : "--"}
+          </h3>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
+
+export default BudgetCard;

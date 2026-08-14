@@ -1,0 +1,387 @@
+/* ===========================================
+   TRIP CARD
+=========================================== */
+
+.trip-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.trip-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 25px 45px rgba(37,99,235,.15);
+
+}
+
+/* ===========================================
+   IMAGE
+=========================================== */
+
+.trip-image{
+
+    position:relative;
+
+}
+
+.trip-image img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* ===========================================
+   FAVORITE BUTTON
+=========================================== */
+
+.favorite-btn{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+
+}
+
+.favorite-btn:hover{
+
+    background:#EF4444;
+
+    color:white;
+
+}
+
+/* ===========================================
+   AI SCORE BADGE
+=========================================== */
+
+.score-badge{
+
+    position:absolute;
+
+    left:18px;
+
+    bottom:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:var(--card);
+
+    color:var(--primary);
+
+    padding:10px 16px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+
+}
+
+/* ===========================================
+   CONTENT
+=========================================== */
+
+.trip-content{
+
+    padding:24px;
+
+}
+
+.trip-content h2{
+
+    font-size:24px;
+
+    color:var(--text);
+
+    margin-bottom:18px;
+
+}
+
+/* ===========================================
+   INFO
+=========================================== */
+
+.trip-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-bottom:20px;
+
+}
+
+.trip-info span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+}
+
+.trip-info svg{
+
+    color:var(--primary);
+
+}
+
+/* ===========================================
+   LOCATION
+=========================================== */
+
+.trip-location{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:14px;
+
+    background:var(--card-secondary);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    color:var(--text-light);
+
+    margin-bottom:24px;
+
+}
+
+.trip-location svg{
+
+    color:var(--primary);
+
+}
+
+/* ===========================================
+   ACTIONS
+=========================================== */
+
+.trip-actions{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+
+}
+
+.trip-actions button{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+/* ===========================================
+   VIEW
+=========================================== */
+
+.view-btn{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #4F46E5
+    );
+
+    color:white;
+
+}
+
+.view-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+
+}
+
+/* ===========================================
+   EDIT
+=========================================== */
+
+.edit-btn{
+
+    background:var(--card-secondary);
+
+    color:var(--primary);
+
+    border:1px solid var(--border);
+
+}
+
+.edit-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ===========================================
+   DELETE
+=========================================== */
+
+.delete-btn{
+
+    background:rgba(239,68,68,.12);
+
+    color:#DC2626;
+
+}
+
+.delete-btn:hover{
+
+    background:#DC2626;
+
+    color:white;
+
+}
+
+/* ===========================================
+   DARK MODE IMPROVEMENTS
+=========================================== */
+
+[data-theme="dark"] .favorite-btn{
+
+    background:#243247;
+
+}
+
+[data-theme="dark"] .score-badge{
+
+    background:#243247;
+
+}
+
+[data-theme="dark"] .trip-location{
+
+    background:#243247;
+
+}
+
+[data-theme="dark"] .edit-btn{
+
+    background:#243247;
+
+}
+
+[data-theme="dark"] .edit-btn:hover{
+
+    background:var(--primary);
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:768px){
+
+.trip-image img{
+
+    height:220px;
+
+}
+
+.trip-actions{
+
+    grid-template-columns:1fr;
+
+}
+
+.trip-content{
+
+    padding:20px;
+
+}
+
+.trip-content h2{
+
+    font-size:20px;
+
+}
+
+}

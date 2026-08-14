@@ -1,0 +1,565 @@
+/* =========================================================
+   TRAVEL TIPS
+========================================================= */
+
+.travel-tips {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e3eaf3;
+
+  padding: 32px;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(15, 35, 70, 0.06);
+
+  overflow: hidden;
+
+  animation: fadeUp 0.5s ease;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.tips-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+}
+
+.travel-tips .section-tag {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 8px 15px;
+
+  margin-bottom: 14px;
+
+  background: #fff7df;
+
+  color: #d97706;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.tips-header h2 {
+  margin: 0 0 8px;
+
+  color: #111827;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.tips-header p {
+  margin: 0;
+
+  max-width: 600px;
+
+  color: #64748b;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   HEADER ICON
+========================================================= */
+
+.tips-icon {
+  width: 68px;
+  height: 68px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f59e0b,
+      #ea580c
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 30px
+    rgba(245, 158, 11, 0.18);
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.tips-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.tip-card {
+  min-width: 0;
+
+  padding: 22px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 20px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(245, 158, 11, 0.30);
+
+  box-shadow:
+    0 14px 30px
+    rgba(15, 35, 70, 0.08);
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.tip-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.tip-number {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #fff4d7;
+
+  color: #d97706;
+
+  border-radius: 11px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.tip-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #fff7e6;
+
+  color: #f59e0b;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.tip-content h3 {
+  margin: 0 0 9px;
+
+  color: #111827;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.tip-content p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.tip-footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 20px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #e9eef5;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.tip-footer svg {
+  color: #f59e0b;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BOTTOM FOOTER
+========================================================= */
+
+.tips-footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 20px;
+
+  padding: 18px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf0,
+      #fff7e6
+    );
+
+  border: 1px solid #fce8bb;
+
+  border-radius: 17px;
+}
+
+.tips-footer-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ffffff;
+
+  color: #d97706;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 15px
+    rgba(217, 119, 6, 0.10);
+}
+
+.tips-footer strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.tips-footer p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.tips-empty {
+  min-height: 260px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+
+  background: #f8fafc;
+
+  border: 1px dashed #dbe4ef;
+
+  border-radius: 20px;
+}
+
+.tips-empty-icon {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  background: #fff4d7;
+
+  color: #d97706;
+
+  border-radius: 18px;
+}
+
+.tips-empty h3 {
+  margin: 0 0 7px;
+
+  color: #111827;
+
+  font-size: 19px;
+}
+
+.tips-empty p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .travel-tips {
+    padding: 22px;
+
+    border-radius: 22px;
+  }
+
+  .tips-header {
+    flex-direction: column;
+  }
+
+  .tips-header h2 {
+    font-size: 27px;
+  }
+
+  .tips-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .tips-footer {
+    align-items: flex-start;
+  }
+
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+[data-theme="dark"] .travel-tips {
+  background: var(--card);
+  border-color: var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] .tips-header h2,
+[data-theme="dark"] .tip-content h3,
+[data-theme="dark"] .tips-empty h3 {
+  color: var(--text);
+}
+
+[data-theme="dark"] .tips-header p,
+[data-theme="dark"] .tip-content p,
+[data-theme="dark"] .tips-empty p {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .travel-tips .section-tag {
+  background: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .tip-card {
+  background: var(--bg);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .tip-card:hover {
+  border-color: rgba(245, 158, 11, 0.30);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] .tip-number {
+  background: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .tip-icon {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .tip-footer {
+  border-top-color: var(--border);
+  color: #64748b;
+}
+
+[data-theme="dark"] .tips-footer {
+  background: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.10),
+    rgba(234, 88, 12, 0.08)
+  );
+
+  border-color: rgba(245, 158, 11, 0.20);
+}
+
+[data-theme="dark"] .tips-footer-icon {
+  background: var(--card);
+  color: #fbbf24;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+}
+
+[data-theme="dark"] .tips-footer strong {
+  color: var(--text);
+}
+
+[data-theme="dark"] .tips-footer p {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .tips-empty {
+  background: var(--bg);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .tips-empty-icon {
+  background: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+}

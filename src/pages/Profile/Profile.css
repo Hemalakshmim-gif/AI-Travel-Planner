@@ -1,0 +1,396 @@
+/* ===========================================
+   PROFILE PAGE
+=========================================== */
+
+.profile-page{
+
+    min-height:100vh;
+
+    background:var(--bg);
+
+    padding-bottom:60px;
+
+}
+
+/* ===========================================
+   COVER
+=========================================== */
+
+.profile-cover{
+
+    height:280px;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #4F46E5,
+        #14B8A6
+    );
+
+}
+
+/* ===========================================
+   PROFILE CARD
+=========================================== */
+
+.profile-card{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:-90px auto 40px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.profile-avatar{
+
+    width:140px;
+
+    height:140px;
+
+    margin:auto;
+
+    margin-top:-110px;
+
+    border-radius:50%;
+
+    background:var(--card);
+
+    border:6px solid var(--card);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--primary);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+.profile-card h1{
+
+    margin-top:20px;
+
+    font-size:36px;
+
+    color:var(--text);
+
+}
+
+.profile-role{
+
+    color:var(--text-light);
+
+    margin:12px 0 25px;
+
+}
+
+.edit-profile-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 26px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #4F46E5
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.edit-profile-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(37,99,235,.30);
+
+}
+
+/* ===========================================
+   GRID
+=========================================== */
+
+.profile-grid{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+}
+
+.profile-section{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    padding:35px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.profile-section h2{
+
+    color:var(--text);
+
+    margin-bottom:25px;
+
+}
+
+/* ===========================================
+   INFO
+=========================================== */
+
+.profile-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:16px 0;
+
+    border-bottom:1px solid var(--border);
+
+    color:var(--text-light);
+
+}
+
+.profile-item svg{
+
+    color:var(--primary);
+
+}
+
+.profile-item:last-child{
+
+    border-bottom:none;
+
+}
+
+/* ===========================================
+   INTERESTS
+=========================================== */
+
+.interest-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+.interest-list span{
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.interest-list span:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ===========================================
+   STATS
+=========================================== */
+
+.travel-stats{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:35px auto 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.stat-box{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    padding:30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--primary);
+
+}
+
+.stat-box svg{
+
+    color:var(--primary);
+
+    margin-bottom:16px;
+
+}
+
+.stat-box h3{
+
+    font-size:30px;
+
+    color:var(--text);
+
+    margin-bottom:8px;
+
+}
+
+.stat-box p{
+
+    color:var(--text-light);
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:992px){
+
+.profile-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.travel-stats{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.profile-card{
+
+    width:95%;
+
+    padding:25px;
+
+}
+
+.profile-avatar{
+
+    width:110px;
+
+    height:110px;
+
+}
+
+.travel-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+.profile-grid{
+
+    width:95%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.profile-cover{
+
+    height:220px;
+
+}
+
+.profile-card h1{
+
+    font-size:28px;
+
+}
+
+.profile-section{
+
+    padding:25px;
+
+}
+
+}

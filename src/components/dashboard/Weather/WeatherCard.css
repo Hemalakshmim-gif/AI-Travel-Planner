@@ -1,0 +1,845 @@
+/* =========================================================
+   WEATHER CARD
+========================================================= */
+
+.weather-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e3eaf3;
+  border-radius: 28px;
+
+  padding: 28px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 35, 70, 0.06);
+
+  overflow: hidden;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.weather-card-header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+
+  box-sizing: border-box;
+}
+
+.weather-header-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.weather-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 7px 13px;
+
+  background: #eef7ff;
+
+  color: #2563eb;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  margin-bottom: 12px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.weather-live-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 4px rgba(34, 197, 94, 0.12);
+}
+
+.weather-header-content h2 {
+  margin: 0;
+
+  font-size: 32px;
+  line-height: 1.15;
+
+  color: #111827;
+
+  font-weight: 800;
+
+  overflow-wrap: break-word;
+
+  transition: color 0.3s ease;
+}
+
+.weather-destination {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 10px;
+
+  color: #64748b;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  min-width: 0;
+
+  transition: color 0.3s ease;
+}
+
+.weather-destination span {
+  min-width: 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.weather-destination svg {
+  color: #2563eb;
+
+  flex-shrink: 0;
+
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================================
+   WEATHER ICON
+========================================================= */
+
+.weather-icon-box {
+  width: 76px;
+  height: 76px;
+
+  min-width: 76px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff8df,
+      #ffefb8
+    );
+
+  color: #f59e0b;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   CURRENT WEATHER
+========================================================= */
+
+.weather-current {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 26px;
+
+  padding: 24px 0;
+
+  border-top: 1px solid #edf1f6;
+  border-bottom: 1px solid #edf1f6;
+
+  box-sizing: border-box;
+
+  transition: border-color 0.3s ease;
+}
+
+.weather-temperature {
+  display: flex;
+  align-items: flex-start;
+
+  color: #111827;
+
+  font-size: 70px;
+  line-height: 0.9;
+
+  font-weight: 800;
+
+  letter-spacing: -3px;
+
+  flex-shrink: 0;
+
+  transition: color 0.3s ease;
+}
+
+.weather-temperature span {
+  margin-top: 4px;
+
+  font-size: 26px;
+
+  letter-spacing: 0;
+
+  font-weight: 700;
+
+  transition: color 0.3s ease;
+}
+
+.weather-condition {
+  min-width: 0;
+  flex: 1;
+}
+
+.weather-condition h3 {
+  margin: 0;
+
+  font-size: 20px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  transition: color 0.3s ease;
+}
+
+.weather-condition p {
+  margin: 6px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================================
+   WEATHER METRICS
+========================================================= */
+
+.weather-metrics {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-top: 20px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   INDIVIDUAL METRIC
+========================================================= */
+
+.weather-metric {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns:
+    40px minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e7edf5;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* =========================================================
+   METRIC ICON
+========================================================= */
+
+.weather-metric-icon {
+  width: 40px;
+  height: 40px;
+
+  min-width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 13px;
+
+  background: #edf4ff;
+
+  color: #2563eb;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   METRIC CONTENT
+========================================================= */
+
+.weather-metric > div:last-child {
+  min-width: 0;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   METRIC VALUE
+========================================================= */
+
+.weather-metric strong {
+  display: block;
+
+  width: 100%;
+
+  font-size: 16px;
+
+  line-height: 1.2;
+
+  color: #111827;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================================
+   METRIC LABEL
+========================================================= */
+
+.weather-metric span {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 4px;
+
+  font-size: 12px;
+
+  line-height: 1.2;
+
+  color: #94a3b8;
+
+  white-space: normal;
+
+  overflow-wrap: break-word;
+
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================================
+   SUNRISE / SUNSET
+========================================================= */
+
+.weather-sun-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 20px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #edf1f6;
+
+  box-sizing: border-box;
+
+  transition: border-color 0.3s ease;
+}
+
+.weather-sun-item {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.sun-icon {
+  width: 40px;
+  height: 40px;
+
+  min-width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+}
+
+.sunrise-icon {
+  background: #fff4d7;
+  color: #f59e0b;
+}
+
+.sunset-icon {
+  background: #f0eaff;
+  color: #8b5cf6;
+}
+
+.weather-sun-item > div:last-child {
+  min-width: 0;
+}
+
+.weather-sun-item span {
+  display: block;
+
+  font-size: 12px;
+
+  color: #94a3b8;
+
+  margin-bottom: 3px;
+
+  transition: color 0.3s ease;
+}
+
+.weather-sun-item strong {
+  display: block;
+
+  font-size: 16px;
+
+  color: #111827;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  transition: color 0.3s ease;
+}
+
+.weather-sun-divider {
+  width: 1px;
+  height: 42px;
+
+  background: #dfe6ef;
+
+  transition: background 0.3s ease;
+}
+
+
+/* =========================================================
+   MEDIUM SCREEN
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .weather-card {
+    padding: 24px;
+  }
+
+  .weather-header-content h2 {
+    font-size: 28px;
+  }
+
+  .weather-temperature {
+    font-size: 62px;
+  }
+
+  .weather-metrics {
+    gap: 10px;
+  }
+
+  .weather-metric {
+    padding: 12px;
+
+    grid-template-columns:
+      36px minmax(0, 1fr);
+
+    gap: 8px;
+  }
+
+  .weather-metric-icon {
+    width: 36px;
+    height: 36px;
+
+    min-width: 36px;
+  }
+
+  .weather-metric strong {
+    font-size: 15px;
+  }
+
+  .weather-metric span {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   NARROW DASHBOARD CARD
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .weather-metrics {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+  .weather-metric {
+    padding: 10px;
+
+    grid-template-columns:
+      34px minmax(0, 1fr);
+
+    gap: 7px;
+  }
+
+  .weather-metric-icon {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    border-radius: 11px;
+  }
+
+  .weather-metric-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .weather-metric strong {
+    font-size: 14px;
+  }
+
+  .weather-metric span {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .weather-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .weather-metric {
+    min-height: 68px;
+
+    grid-template-columns:
+      40px minmax(0, 1fr);
+
+    padding: 14px;
+  }
+
+  .weather-metric-icon {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .weather-card {
+    padding: 20px;
+
+    border-radius: 22px;
+  }
+
+  .weather-card-header {
+    align-items: center;
+  }
+
+  .weather-header-content h2 {
+    font-size: 25px;
+  }
+
+  .weather-icon-box {
+    width: 62px;
+    height: 62px;
+
+    min-width: 62px;
+
+    border-radius: 18px;
+  }
+
+  .weather-icon-box svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .weather-current {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .weather-temperature {
+    font-size: 58px;
+  }
+
+  .weather-condition {
+    width: 100%;
+  }
+
+  .weather-condition h3 {
+    white-space: normal;
+  }
+
+  .weather-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .weather-sun-row {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .weather-sun-divider {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   DARK MODE
+   Theme source:
+   html[data-theme="dark"]
+========================================================= */
+
+html[data-theme="dark"] .weather-card {
+  background: #1e293b;
+
+  border-color: #334155;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   DARK - HEADER
+========================================================= */
+
+html[data-theme="dark"] .weather-live-badge {
+  background: rgba(37, 99, 235, 0.18);
+
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] .weather-header-content h2 {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .weather-destination {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .weather-destination svg {
+  color: #60a5fa;
+}
+
+
+/* =========================================================
+   DARK - WEATHER ICON
+========================================================= */
+
+html[data-theme="dark"] .weather-icon-box {
+  background:
+    linear-gradient(
+      145deg,
+      #3b341c,
+      #4a3c17
+    );
+
+  color: #fbbf24;
+}
+
+
+/* =========================================================
+   DARK - CURRENT WEATHER
+========================================================= */
+
+html[data-theme="dark"] .weather-current {
+  border-top-color: #334155;
+  border-bottom-color: #334155;
+}
+
+html[data-theme="dark"] .weather-temperature {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .weather-temperature span {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .weather-condition h3 {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .weather-condition p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   DARK - WEATHER METRICS
+========================================================= */
+
+html[data-theme="dark"] .weather-metric {
+  background: #172033;
+
+  border-color: #334155;
+}
+
+html[data-theme="dark"] .weather-metric-icon {
+  background: rgba(37, 99, 235, 0.18);
+
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] .weather-metric strong {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .weather-metric span {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   DARK - SUNRISE / SUNSET
+========================================================= */
+
+html[data-theme="dark"] .weather-sun-row {
+  border-top-color: #334155;
+}
+
+html[data-theme="dark"] .sunrise-icon {
+  background: rgba(245, 158, 11, 0.16);
+
+  color: #fbbf24;
+}
+
+html[data-theme="dark"] .sunset-icon {
+  background: rgba(139, 92, 246, 0.16);
+
+  color: #a78bfa;
+}
+
+html[data-theme="dark"] .weather-sun-item span {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .weather-sun-item strong {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .weather-sun-divider {
+  background: #475569;
+}

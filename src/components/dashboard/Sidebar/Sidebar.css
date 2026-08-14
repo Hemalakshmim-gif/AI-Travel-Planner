@@ -1,0 +1,277 @@
+/* ===========================================
+   SIDEBAR
+=========================================== */
+
+.sidebar{
+
+    position:sticky;
+
+    top:35px;
+
+    align-self:start;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:24px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+    gap:25px;
+
+    transition:.35s;
+
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.sidebar-header{
+
+    margin-bottom:35px;
+
+}
+
+.sidebar-header h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+    margin-bottom:6px;
+
+}
+
+.sidebar-header p{
+
+    color:var(--text-light);
+
+}
+
+/* ===========================================
+   MENU
+=========================================== */
+
+.sidebar-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+.sidebar-item{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:15px 18px;
+
+    border:none;
+
+    background:transparent;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--text-light);
+
+    transition:.3s;
+
+}
+
+.sidebar-item:hover{
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--primary);
+
+    transform:translateX(6px);
+
+}
+
+/* ===========================================
+   ACTIVE
+=========================================== */
+
+.sidebar-item.active{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #4F46E5
+    );
+
+    color:white;
+
+    box-shadow:0 12px 28px rgba(37,99,235,.25);
+
+}
+
+.sidebar-item.active svg{
+
+    color:white;
+
+}
+
+/* ===========================================
+   ICONS
+=========================================== */
+
+.sidebar-item svg{
+
+    color:inherit;
+
+    transition:.3s;
+
+}
+
+/* ===========================================
+   BOTTOM
+=========================================== */
+
+.sidebar-bottom{
+
+    margin-top:auto;
+
+    padding-top:20px;
+
+}
+
+/* ===========================================
+   AI CARD
+=========================================== */
+
+.ai-card{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    padding:18px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    color:white;
+
+    width:100%;
+
+}
+
+.ai-card svg{
+
+    width:24px;
+
+    height:24px;
+
+    margin-bottom:10px;
+
+}
+
+.ai-card h3{
+
+    font-size:52px;
+
+    font-weight:700;
+
+    line-height:1;
+
+    margin:12px 0;
+
+}
+
+.ai-card p{
+
+    font-size:16px;
+
+    opacity:.9;
+
+}
+
+/* ===========================================
+   TABLET
+=========================================== */
+
+@media(max-width:992px){
+
+.sidebar{
+
+    position:relative;
+
+    top:0;
+
+    height:auto;
+
+}
+
+}
+
+/* ===========================================
+   MOBILE
+=========================================== */
+
+@media(max-width:768px){
+
+.sidebar{
+
+    padding:20px;
+
+}
+
+.sidebar-item{
+
+    padding:14px;
+
+}
+
+}
+
+/* ==========================================
+   AI SCORE REASON
+========================================== */
+
+.ai-score-reason {
+  display: block;
+
+  margin-top: 10px;
+
+  padding: 0 12px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  text-align: center;
+}

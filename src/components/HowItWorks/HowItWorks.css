@@ -1,0 +1,197 @@
+/* ===========================================
+   HOW IT WORKS
+=========================================== */
+
+.how-section{
+
+    padding:100px 0;
+
+    background:var(--bg);
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title span{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--primary);
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+    font-size:46px;
+
+    color:var(--text);
+
+    margin-bottom:18px;
+
+}
+
+.section-title h2 span{
+
+    background:none;
+
+    padding:0;
+
+    color:var(--primary);
+
+}
+
+.section-title p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:var(--text-light);
+
+}
+
+.steps-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.step-card{
+
+    position:relative;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    padding:35px;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.step-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+    background:var(--card-secondary);
+
+}
+
+.step-number{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:var(--border);
+
+}
+
+.step-icon{
+
+    width:75px;
+
+    height:75px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #14B8A6
+    );
+
+    color:white;
+
+    margin-bottom:25px;
+
+}
+
+.step-card h3{
+
+    font-size:24px;
+
+    color:var(--text);
+
+    margin-bottom:15px;
+
+}
+
+.step-card p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+@media(max-width:992px){
+
+.steps-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.steps-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.section-title h2{
+
+font-size:34px;
+
+}
+
+}

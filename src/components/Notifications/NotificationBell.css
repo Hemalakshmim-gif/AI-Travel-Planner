@@ -1,0 +1,295 @@
+/* ===========================================
+   NOTIFICATION WRAPPER
+=========================================== */
+
+.notification-wrapper{
+    position:relative;
+}
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+.notification-button{
+
+    width:46px;
+    height:46px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    position:relative;
+
+    transition:.3s;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+.notification-button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================================
+   COUNT BADGE
+=========================================== */
+
+.notification-count{
+
+    position:absolute;
+
+    top:-5px;
+    right:-5px;
+
+    width:20px;
+    height:20px;
+
+    border-radius:50%;
+
+    background:#EF4444;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:11px;
+
+    font-weight:700;
+
+}
+
+/* ===========================================
+   DROPDOWN
+=========================================== */
+
+.notification-dropdown{
+
+    position:absolute;
+
+    top:60px;
+    right:0;
+
+    width:380px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    animation:fadeDown .3s ease;
+
+    z-index:1000;
+
+}
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+transform:translateY(-15px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.notification-header{
+
+    padding:22px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.notification-header h3{
+
+    color:var(--text);
+
+    font-size:22px;
+
+}
+
+/* ===========================================
+   LIST
+=========================================== */
+
+.notification-list{
+
+    max-height:420px;
+
+    overflow-y:auto;
+
+}
+
+/* ===========================================
+   ITEM
+=========================================== */
+
+.notification-item{
+
+    display:flex;
+
+    gap:16px;
+
+    padding:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.notification-item:hover{
+
+    background:var(--card-secondary);
+
+}
+
+.notification-item h4{
+
+    color:var(--text);
+
+    margin-bottom:6px;
+
+    font-size:16px;
+
+}
+
+.notification-item p{
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    margin-bottom:8px;
+
+}
+
+.notification-item span{
+
+    color:var(--text-muted);
+
+    font-size:12px;
+
+}
+
+/* ===========================================
+   STATUS DOTS
+=========================================== */
+
+.notification-dot{
+
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+
+    margin-top:6px;
+
+    flex-shrink:0;
+
+}
+
+.notification-dot.success{
+
+    background:#22C55E;
+
+}
+
+.notification-dot.weather{
+
+    background:#3B82F6;
+
+}
+
+.notification-dot.budget{
+
+    background:#F59E0B;
+
+}
+
+.notification-dot.trip{
+
+    background:#8B5CF6;
+
+}
+
+/* ===========================================
+   SCROLLBAR
+=========================================== */
+
+.notification-list::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.notification-list::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.notification-list::-webkit-scrollbar-thumb{
+
+    background:var(--border);
+
+    border-radius:20px;
+
+}
+
+.notification-list::-webkit-scrollbar-thumb:hover{
+
+    background:var(--text-muted);
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:600px){
+
+.notification-dropdown{
+
+    width:320px;
+
+    right:-100px;
+
+}
+
+}

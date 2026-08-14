@@ -1,0 +1,111 @@
+/* ===========================================
+   PROFILE MENU
+=========================================== */
+
+.profile-menu{
+
+    position:absolute;
+
+    top:68px;
+
+    right:0;
+
+    width:240px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    z-index:9999;
+
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+.profile-menu button{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:16px 18px;
+
+    border:none;
+
+    background:none;
+
+    color:var(--text);
+
+    font-size:15px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.profile-menu button:hover{
+
+    background:var(--card-secondary);
+
+    color:var(--primary);
+
+}
+
+.profile-menu button svg{
+
+    flex-shrink:0;
+
+}
+
+/* ===========================================
+   DIVIDER
+=========================================== */
+
+.profile-menu hr{
+
+    border:none;
+
+    border-top:1px solid var(--border);
+
+}
+
+/* ===========================================
+   LOGOUT
+=========================================== */
+
+.logout-item{
+
+    color:#EF4444 !important;
+
+}
+
+.logout-item:hover{
+
+    background:rgba(239,68,68,.08);
+
+}
+
+/* ===========================================
+   DARK MODE
+=========================================== */
+
+[data-theme="dark"] .logout-item:hover{
+
+    background:rgba(239,68,68,.18);
+
+}

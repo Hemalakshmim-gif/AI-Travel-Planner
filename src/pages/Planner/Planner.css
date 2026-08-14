@@ -1,0 +1,176 @@
+.planner-page{
+
+padding:40px 0 80px;
+
+background:#F8FAFC;
+
+min-height:100vh;
+
+}
+
+.planner-results{
+
+display:flex;
+
+flex-direction:column;
+
+gap:35px;
+
+margin-top:50px;
+
+animation:fadeUp .5s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================================
+   PLANNER ERROR
+========================================== */
+
+.planner-error {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 30px;
+  padding: 22px 25px;
+
+  background: #fff7ed;
+
+  border: 1px solid #fed7aa;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.planner-error-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffedd5;
+
+  border-radius: 15px;
+
+  font-size: 24px;
+}
+
+.planner-error-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.planner-error-content h3 {
+  margin: 0 0 5px;
+
+  color: #9a3412;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.planner-error-content p {
+  margin: 0;
+
+  color: #c2410c;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.planner-error-btn {
+  margin-top: 14px;
+
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #f97316,
+    #ea580c
+  );
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.planner-error-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(234, 88, 12, 0.25);
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .planner-error {
+    align-items: flex-start;
+
+    padding: 18px;
+
+    gap: 13px;
+  }
+
+  .planner-error-icon {
+    width: 42px;
+    height: 42px;
+
+    font-size: 20px;
+  }
+
+  .planner-error-content h3 {
+    font-size: 16px;
+  }
+
+  .planner-error-content p {
+    font-size: 13px;
+  }
+
+}

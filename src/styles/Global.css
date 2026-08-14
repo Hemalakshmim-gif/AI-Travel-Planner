@@ -1,0 +1,366 @@
+@import "./Variables.css";
+
+
+/* =========================================================
+   ROOT THEME VARIABLES
+========================================================= */
+
+:root {
+
+  /* LIGHT MODE */
+
+  --bg: #f4f7fb;
+
+  --card: #ffffff;
+
+  --card-secondary: #f8fafc;
+
+  --text: #111827;
+
+  --text-light: #64748b;
+
+  --text-muted: #94a3b8;
+
+  --border: #e3eaf3;
+
+  --border-light: #edf1f6;
+
+  --primary: #2563eb;
+
+  --primary-light: #eef4ff;
+
+  --secondary: #14b8a6;
+
+  --success: #22c55e;
+
+  --warning: #f59e0b;
+
+  --danger: #ef4444;
+
+  --shadow:
+    0 10px 30px
+    rgba(15, 35, 70, 0.06);
+
+  --shadow-hover:
+    0 16px 35px
+    rgba(15, 35, 70, 0.10);
+
+  --input-bg: #ffffff;
+
+  --surface: #f8fafc;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+html[data-theme="dark"] {
+
+  --bg: #0b1220;
+
+  --card: #172235;
+
+  --card-secondary: #1d2a3d;
+
+  --text: #f8fafc;
+
+  --text-light: #a8b4c7;
+
+  --text-muted: #7f8da3;
+
+  --border: #334155;
+
+  --border-light: #2b3a4f;
+
+  --primary: #4f7cff;
+
+  --primary-light: #1e3158;
+
+  --secondary: #20c7b2;
+
+  --success: #4ade80;
+
+  --warning: #fbbf24;
+
+  --danger: #f87171;
+
+  --shadow:
+    0 12px 35px
+    rgba(0, 0, 0, 0.25);
+
+  --shadow-hover:
+    0 18px 40px
+    rgba(0, 0, 0, 0.35);
+
+  --input-bg: #1d2a3d;
+
+  --surface: #111c2d;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HTML
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   HTML / BODY / ROOT
+========================================================= */
+
+html,
+body,
+#root {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background: var(--bg);
+
+  color: var(--text);
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button {
+
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   INPUT DARK MODE
+========================================================= */
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select {
+
+  background: var(--input-bg);
+
+  color: var(--text);
+
+  border-color: var(--border);
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+  width: 92%;
+
+  max-width: 1450px;
+
+  margin: auto;
+}
+
+
+/* =========================================================
+   GLOBAL TRANSITIONS
+========================================================= */
+
+body,
+#root,
+.navbar,
+.dashboard,
+.dashboard-content,
+.page-wrapper,
+.card,
+section,
+article,
+aside,
+button,
+input,
+textarea,
+select {
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+
+  background: var(--primary);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: var(--border);
+
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+img {
+
+  max-width: 100%;
+
+  display: block;
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  color: var(--text);
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+p {
+
+  color: var(--text-light);
+}
+
+
+/* =========================================================
+   DARK SURFACE
+========================================================= */
+
+.dark-surface {
+
+  background: var(--card);
+
+  color: var(--text);
+
+  border-color: var(--border);
+}
+
+
+/* =========================================================
+   DARK BODY
+========================================================= */
+
+html[data-theme="dark"] body {
+
+  background: var(--bg);
+
+  color: var(--text);
+}
