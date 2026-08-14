@@ -16,10 +16,8 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:3000",
-
-  // Production frontend
-  process.env.FRONTEND_URL,
-].filter(Boolean);
+  "https://ai-travel-planner-ten-orcin.vercel.app",
+];
 
 app.use(
   cors({
